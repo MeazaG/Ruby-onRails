@@ -1,0 +1,25 @@
+
+<h1>Posts Page</h1>
+
+
+
+<%
+  # this is called by the index method in 
+  # the posts controller
+%>
+
+
+<h3>Posts Home Page</h3>
+
+
+<% @posts.each do |film| %>
+  <h3><%= post.title %></h3>
+  <div>
+    <%= 
+      # post.description 
+      truncate(post.description, :length => 100)
+    %>
+  </div>
+  <br>
+  <%= link_to "Read More", post %>
+<% end %>

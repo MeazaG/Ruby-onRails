@@ -1,0 +1,19 @@
+<%
+  # form_for is a rails helper for rendering forms in the view  
+  # @post is an instance scoped variable that is declared in 
+  # posts_controller new method. It points to a new
+  # instance of the Post model
+  # p.submit will need a create action
+%>
+
+
+<%= form_for @post do |p| %>
+  <%= p.label :title %><br>
+  <%= p.text_field :title %><br>
+  <br>
+  <%= p.label :description %><br>
+  <%= p.text_area :description %><br>
+  <br>
+  <br>
+  <%= p.submit %>
+<% end %>

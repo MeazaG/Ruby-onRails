@@ -1,0 +1,9 @@
+<h3>Show Post Page</h3>
+
+<h3><%= @post.title %></h3>
+
+<p><%= @post.description %></p>
+
+<%= link_to "Edit Post Details", edit_post_path(@post) %>
+<br/>
+<%= link_to "Delete Post", Post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
